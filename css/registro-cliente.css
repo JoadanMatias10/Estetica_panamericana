@@ -1,0 +1,137 @@
+/* ========== PANTALLA REGISTRO DE CLIENTE ========== */
+
+.page {
+  background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.06), transparent 25%),
+    radial-gradient(circle at 80% 0%, rgba(236, 72, 153, 0.06), transparent 28%),
+    linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.main-content .card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 14px 48px rgba(0, 0, 0, 0.12);
+}
+
+.main-content .card::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: calc(var(--radius-card) + 4px);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.4), rgba(139, 92, 246, 0.35), rgba(236, 72, 153, 0.3));
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+  z-index: -1;
+}
+
+.main-content .card:hover::after {
+  opacity: 0.22;
+}
+
+.card-header {
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-title::before {
+  content: "\1F4DD";
+  font-size: 1.4rem;
+  opacity: 0.7;
+}
+
+.card-subtitle {
+  color: #475569;
+  font-weight: 600;
+}
+
+/* Grid del formulario */
+.form-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.form-group label {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.form-control {
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  padding: 13px 14px;
+  transition: all var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12), 0 10px 30px rgba(59, 130, 246, 0.18);
+  transform: translateY(-1px);
+}
+
+/* Botón de registro */
+.btn {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border: none;
+  box-shadow: 0 12px 34px rgba(59, 130, 246, 0.35);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.btn:active::after {
+  width: 280px;
+  height: 280px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.38);
+}
+
+/* Enlaces complementarios */
+section.card + div,
+section.card + div + p {
+  text-align: center;
+  color: #475569;
+}
+
+section.card + div a {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+section.card + div + p {
+  margin-top: 12px !important;
+  color: #64748b !important;
+}
+
+@media (max-width: 520px) {
+  .main-content .card {
+    max-width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

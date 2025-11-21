@@ -1,0 +1,132 @@
+/* ========== PANTALLA LOGIN CLIENTE ========== */
+
+/* Fondo sutil para centrar la atención en el formulario */
+.page {
+  background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.08), transparent 25%),
+    radial-gradient(circle at 80% 10%, rgba(236, 72, 153, 0.08), transparent 25%),
+    linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+/* Tarjeta principal con efecto de brillo */
+.main-content .card {
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(59, 130, 246, 0.08);
+  box-shadow: 0 14px 48px rgba(0, 0, 0, 0.12);
+}
+
+.main-content .card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: calc(var(--radius-card) + 4px);
+  background: linear-gradient(120deg, rgba(59, 130, 246, 0.4), rgba(139, 92, 246, 0.35), rgba(236, 72, 153, 0.3));
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+}
+
+.main-content .card:hover::before {
+  opacity: 0.25;
+}
+
+/* Cabecera centrada */
+.card-header {
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.card-title {
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+/* Campos del formulario con énfasis en el enfoque */
+.form-group label {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.form-control {
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  transition: all var(--transition-fast);
+  padding: 14px 16px;
+}
+
+.form-control:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12), 0 10px 30px rgba(59, 130, 246, 0.18);
+  transform: translateY(-1px);
+}
+
+/* Botón con gradiente y efecto de onda */
+.btn {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border: none;
+  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.35);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.btn:active::after {
+  width: 280px;
+  height: 280px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.4);
+}
+
+/* Enlaces complementarios debajo del formulario */
+section.card + div,
+section.card + div + p {
+  text-align: center;
+  color: #475569;
+}
+
+section.card + div a {
+  color: #2563eb;
+  font-weight: 700;
+  transition: color var(--transition-fast);
+}
+
+section.card + div a:hover {
+  color: #1d4ed8;
+}
+
+section.card + div + p {
+  margin-top: 12px !important;
+  color: #64748b !important;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .main-content .card {
+    max-width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
