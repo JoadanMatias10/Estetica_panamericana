@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mi perfil | Módulo Estilista</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <div class="page">
+    <header class="main-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-logo">EP</span>
+          <div class="brand-text">
+            <span class="brand-title">Estética Panamericana</span>
+            <span class="brand-subtitle">Módulo Estilista</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="estilista-home.html" class="nav-link">Mi día</a>
+          <a href="estilista-agenda.html" class="nav-link">Mi agenda</a>
+          <a href="estilista-servicios-historial.html" class="nav-link">Mis servicios</a>
+          <a href="estilista-notificaciones.html" class="nav-link">Notificaciones</a>
+          <a href="estilista-perfil.html" class="nav-link is-active">Mi perfil</a>
+          <a href="estilista-login.html" class="nav-link">Salir</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <!-- Datos del estilista -->
+        <section class="card">
+          <div class="card-header">
+            <h1 class="card-title">Mi perfil</h1>
+          </div>
+
+          <ul class="list">
+            <li class="list-item"><span>Nombre:</span><span>Ana Gómez</span></li>
+            <li class="list-item"><span>Especialidad:</span><span>Colorimetría y cortes</span></li>
+            <li class="list-item"><span>Horario asignado:</span><span>Lun-Sáb · 10:00–18:00</span></li>
+          </ul>
+        </section>
+
+        <!-- Actualizar datos básicos -->
+        <section class="card" style="margin-top:16px;">
+          <div class="card-header">
+            <h2 class="card-title">Actualizar datos de contacto</h2>
+          </div>
+
+          <form class="form-grid" autocomplete="off">
+            <div class="form-group">
+              <label for="perf-tel">Teléfono</label>
+              <input id="perf-tel" type="tel" class="form-control" placeholder="771 000 0000" />
+            </div>
+            <div class="form-group">
+              <label for="perf-foto">URL foto de perfil (opcional)</label>
+              <input id="perf-foto" type="text" class="form-control" placeholder="https://..." />
+            </div>
+            <div class="form-group" style="grid-column:1/-1;">
+              <button type="submit" class="btn">Guardar cambios</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Cambiar contraseña -->
+        <section class="card" style="margin-top:16px;">
+          <div class="card-header">
+            <h2 class="card-title">Cambiar contraseña</h2>
+          </div>
+
+          <form class="form-grid form-grid--single">
+            <div class="form-group">
+              <label for="perf-pass-actual">Contraseña actual</label>
+              <input id="perf-pass-actual" type="password" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="perf-pass-nueva">Nueva contraseña</label>
+              <input id="perf-pass-nueva" type="password" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="perf-pass-conf">Confirmar nueva contraseña</label>
+              <input id="perf-pass-conf" type="password" class="form-control" />
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn">Actualizar contraseña</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-inner">
+        <p>© 2025 Estética Panamericana · Módulo Estilista</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home Estilista | Mi día</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <div class="page">
+    <header class="main-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-logo">EP</span>
+          <div class="brand-text">
+            <span class="brand-title">Estética Panamericana</span>
+            <span class="brand-subtitle">Módulo Estilista</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="estilista-home.html" class="nav-link is-active">Mi día</a>
+          <a href="estilista-agenda.html" class="nav-link">Mi agenda</a>
+          <a href="estilista-servicios-historial.html" class="nav-link">Mis servicios</a>
+          <a href="estilista-notificaciones.html" class="nav-link">Notificaciones</a>
+          <a href="estilista-perfil.html" class="nav-link">Mi perfil</a>
+          <a href="estilista-login.html" class="nav-link">Salir</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <!-- Citas del día -->
+        <section class="card">
+          <div class="card-header">
+            <h1 class="card-title">Mi día como estilista</h1>
+            <span class="card-subtitle">Citas asignadas para hoy, estados y notificaciones.</span>
+          </div>
+
+          <h2 class="section-title">Citas del día</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Hora</th>
+                <th>Cliente</th>
+                <th>Servicio</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>10:00</td>
+                <td>María López</td>
+                <td>Corte de cabello</td>
+                <td><span class="badge">Pendiente</span></td>
+                <td>
+                  <a href="estilista-detalle-cita.html" style="font-size:0.78rem;">Ver detalle</a> ·
+                  <a href="#" style="font-size:0.78rem;">En atención</a> ·
+                  <a href="#" style="font-size:0.78rem;">Completada</a>
+                </td>
+              </tr>
+              <tr>
+                <td>12:30</td>
+                <td>Carlos Pérez</td>
+                <td>Tinte</td>
+                <td><span class="badge">En curso</span></td>
+                <td>
+                  <a href="estilista-detalle-cita.html" style="font-size:0.78rem;">Ver detalle</a> ·
+                  <a href="#" style="font-size:0.78rem;">Completada</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Notificaciones y accesos rápidos -->
+        <section class="card" style="margin-top:18px;">
+          <div class="card-header">
+            <h2 class="card-title">Notificaciones recientes</h2>
+          </div>
+          <ul class="list">
+            <li class="list-item">
+              <span>Nueva cita asignada a las 16:00 con Laura Sánchez (Laciado).</span>
+              <span style="font-size:0.75rem;">Hace 10 min</span>
+            </li>
+            <li class="list-item">
+              <span>Cita reprogramada: Juan Pérez ahora a las 18:00.</span>
+              <span style="font-size:0.75rem;">Hace 30 min</span>
+            </li>
+          </ul>
+
+          <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;">
+            <a href="estilista-agenda.html" class="btn">Ver agenda</a>
+            <a href="estilista-servicios-historial.html" class="btn btn--ghost">Historial de servicios</a>
+            <a href="estilista-notificaciones.html" class="btn btn--ghost">Ver todas las notificaciones</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-inner">
+        <p>© 2025 Estética Panamericana · Módulo Estilista</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

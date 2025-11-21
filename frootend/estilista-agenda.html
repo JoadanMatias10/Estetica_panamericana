@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mi agenda | Módulo Estilista</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <div class="page">
+    <header class="main-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-logo">EP</span>
+          <div class="brand-text">
+            <span class="brand-title">Estética Panamericana</span>
+            <span class="brand-subtitle">Módulo Estilista</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="estilista-home.html" class="nav-link">Mi día</a>
+          <a href="estilista-agenda.html" class="nav-link is-active">Mi agenda</a>
+          <a href="estilista-servicios-historial.html" class="nav-link">Mis servicios</a>
+          <a href="estilista-notificaciones.html" class="nav-link">Notificaciones</a>
+          <a href="estilista-perfil.html" class="nav-link">Mi perfil</a>
+          <a href="estilista-login.html" class="nav-link">Salir</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <!-- Filtros día / semana -->
+        <section class="card">
+          <div class="card-header">
+            <h1 class="card-title">Mi agenda</h1>
+            <span class="card-subtitle">Vista de citas asignadas por día o semana.</span>
+          </div>
+
+          <form class="form-grid">
+            <div class="form-group">
+              <label for="ag-fecha">Fecha</label>
+              <input id="ag-fecha" type="date" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="ag-vista">Vista</label>
+              <select id="ag-vista" class="form-control">
+                <option>Día</option>
+                <option>Semana</option>
+              </select>
+            </div>
+          </form>
+
+          <div style="margin-top:10px;">
+            <button class="btn">Actualizar agenda</button>
+          </div>
+        </section>
+
+        <!-- Lista de citas de la agenda -->
+        <section class="card" style="margin-top:18px;">
+          <div class="card-header">
+            <h2 class="card-title">Citas asignadas</h2>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Hora</th>
+                <th>Cliente</th>
+                <th>Servicio</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>09:00</td>
+                <td>Juan Pérez</td>
+                <td>Corte</td>
+                <td><span class="badge">Pendiente</span></td>
+                <td>
+                  <a href="estilista-detalle-cita.html" style="font-size:0.78rem;">Ver detalle</a> ·
+                  <a href="#" style="font-size:0.78rem;">En atención</a> ·
+                  <a href="#" style="font-size:0.78rem;">Completada</a> ·
+                  <a href="#" style="font-size:0.78rem;">No se presentó</a>
+                </td>
+              </tr>
+              <tr>
+                <td>11:30</td>
+                <td>Laura Sánchez</td>
+                <td>Laciado</td>
+                <td><span class="badge">En curso</span></td>
+                <td>
+                  <a href="estilista-detalle-cita.html" style="font-size:0.78rem;">Ver detalle</a> ·
+                  <a href="#" style="font-size:0.78rem;">Completada</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p style="margin-top:8px;font-size:0.78rem;color:#666;">
+            Nota: el estilista solo cambia el estado de la cita; la reprogramación la realiza el cliente o el administrador.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-inner">
+        <p>© 2025 Estética Panamericana · Módulo Estilista</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
