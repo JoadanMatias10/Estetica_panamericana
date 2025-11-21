@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard Administrador | Estética Panamericana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <div class="page">
+    <header class="main-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-logo">EP</span>
+          <div class="brand-text">
+            <span class="brand-title">Estética Panamericana</span>
+            <span class="brand-subtitle">Panel Administrador</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="admin-dashboard.html" class="nav-link is-active">Dashboard</a>
+          <a href="admin-agenda.html" class="nav-link">Citas</a>
+          <a href="admin-clientes-listado.html" class="nav-link">Clientes</a>
+          <a href="admin-servicios-listado.html" class="nav-link">Servicios</a>
+          <a href="admin-inventario.html" class="nav-link">Inventario</a>
+          <a href="admin-pagos-registro.html" class="nav-link">Ventas / Pagos</a>
+          <a href="admin-reportes-generar.html" class="nav-link">Reportes</a>
+          <a href="admin-notificaciones-recordatorios.html" class="nav-link">Notificaciones</a>
+          <a href="admin-estilistas.html" class="nav-link">Estilistas</a>
+          <a href="admin-login.html" class="nav-link">Salir</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <!-- Resumen principal -->
+        <section class="card">
+          <div class="card-header">
+            <h1 class="card-title">Dashboard administrador</h1>
+            <span class="card-subtitle">Resumen general del negocio.</span>
+          </div>
+
+          <div class="grid">
+            <article class="card">
+              <div class="card-header">
+                <h2 class="card-title" style="font-size:0.95rem;">Citas de hoy</h2>
+              </div>
+              <p style="font-size:0.9rem;">Total: 12 citas</p>
+              <ul class="list">
+                <li class="list-item"><span>Confirmadas:</span><span>9</span></li>
+                <li class="list-item"><span>Pendientes:</span><span>2</span></li>
+                <li class="list-item"><span>Canceladas:</span><span>1</span></li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="card-header">
+                <h2 class="card-title" style="font-size:0.95rem;">Servicios más solicitados</h2>
+              </div>
+              <ul class="list">
+                <li class="list-item"><span>Corte de cabello</span><span>25</span></li>
+                <li class="list-item"><span>Tinte completo</span><span>15</span></li>
+                <li class="list-item"><span>Laciado permanente</span><span>8</span></li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="card-header">
+                <h2 class="card-title" style="font-size:0.95rem;">Ventas del mes</h2>
+              </div>
+              <ul class="list">
+                <li class="list-item"><span>Servicios:</span><span>$18,500</span></li>
+                <li class="list-item"><span>Productos:</span><span>$9,200</span></li>
+                <li class="list-item"><span>Total:</span><span>$27,700</span></li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="card-header">
+                <h2 class="card-title" style="font-size:0.95rem;">Productos más vendidos</h2>
+              </div>
+              <ul class="list">
+                <li class="list-item"><span>Shampoo AVYNA</span><span>30 pzs</span></li>
+                <li class="list-item"><span>Tratamiento reparador</span><span>18 pzs</span></li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="card-header">
+                <h2 class="card-title" style="font-size:0.95rem;">Alertas de inventario</h2>
+              </div>
+              <p style="font-size:0.9rem;">Productos con stock bajo: 4</p>
+              <a href="admin-inventario-alertas.html" class="btn btn--ghost" style="margin-top:8px;">Ver alertas</a>
+            </article>
+          </div>
+        </section>
+
+        <!-- Accesos rápidos -->
+        <section class="card" style="margin-top:18px;">
+          <div class="card-header">
+            <h2 class="card-title">Accesos rápidos</h2>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <a href="admin-agenda.html" class="btn">Gestionar citas</a>
+            <a href="admin-clientes-listado.html" class="btn btn--ghost">Gestión de clientes</a>
+            <a href="admin-servicios-listado.html" class="btn btn--ghost">Gestión de servicios</a>
+            <a href="admin-inventario.html" class="btn btn--ghost">Gestión de inventario</a>
+            <a href="admin-pagos-registro.html" class="btn btn--ghost">Registro de pagos</a>
+            <a href="admin-reportes-generar.html" class="btn btn--ghost">Reportes mensuales</a>
+            <a href="admin-notificaciones-promociones.html" class="btn btn--ghost">Promociones</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-inner">
+        <p>© 2025 Estética Panamericana · Panel Administrador</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

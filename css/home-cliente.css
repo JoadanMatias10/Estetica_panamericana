@@ -1,0 +1,330 @@
+
+/* ====================== HOME CLIENTE (LOOK PROFESIONAL A JUEGO CON AGENDAR CITA) ====================== */
+/* Fondo atmosférico con destellos */
+.page,
+.main-content {
+  position: relative;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(59, 130, 246, 0.08), transparent 30%),
+    radial-gradient(circle at 82% 12%, rgba(236, 72, 153, 0.08), transparent 32%),
+    radial-gradient(circle at 40% 78%, rgba(16, 185, 129, 0.08), transparent 30%),
+    linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.main-content::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 24% 42%, rgba(59, 130, 246, 0.05), transparent 45%),
+    radial-gradient(circle at 78% 18%, rgba(139, 92, 246, 0.05), transparent 50%);
+}
+
+/* Cabecera héroe con halo */
+.home-hero {
+  margin-bottom: 20px;
+}
+
+.home-hero .card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.98));
+  border-radius: var(--radius-card);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.12), 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+  isolation: isolate;
+}
+
+.home-hero .card::before,
+.home-hero .card::after {
+  content: "";
+  position: absolute;
+  inset: -30%;
+  background: radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.12), transparent 50%);
+  filter: blur(24px);
+  opacity: 0.9;
+}
+
+.home-hero .card::after {
+  inset: -35%;
+  background: radial-gradient(circle at 70% 24%, rgba(236, 72, 153, 0.12), transparent 55%);
+}
+
+.home-hero .card-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+
+.home-hero .card p {
+  color: #475569;
+  margin-top: 6px;
+  line-height: 1.55;
+}
+
+/* Botones primarios y enlaces del héroe */
+.home-hero .btn-primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  box-shadow: 0 14px 38px rgba(59, 130, 246, 0.35);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-fast);
+}
+
+.home-hero .btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.home-hero .btn-primary:active::after {
+  width: 220px;
+  height: 220px;
+}
+
+.home-hero .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 48px rgba(37, 99, 235, 0.42);
+}
+
+.home-hero .link-subtle {
+  color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+}
+
+.home-hero .link-subtle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(135deg, #3b82f6, #ec4899);
+  border-radius: 999px;
+  opacity: 0.2;
+  transition: opacity var(--transition-fast);
+}
+
+.home-hero .link-subtle:hover::after {
+  opacity: 0.7;
+}
+
+/* Tarjetas de accesos rápidos */
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.quick-actions .card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #ffffff, #f8fafc);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-card);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  padding: 16px 18px;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.quick-actions .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+  opacity: 0.9;
+}
+
+.quick-actions .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(59, 130, 246, 0.18);
+}
+
+.quick-actions .card-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.quick-actions .card p {
+  color: #475569;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.quick-actions .btn {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: linear-gradient(135deg, #e0f2fe, #f3e8ff);
+  color: #2563eb;
+  border: 2px solid rgba(37, 99, 235, 0.16);
+  transition: all var(--transition-fast);
+}
+
+.quick-actions .btn:hover {
+  border-color: #2563eb;
+  box-shadow: 0 10px 26px rgba(59, 130, 246, 0.22);
+  transform: translateY(-1px);
+}
+
+/* Grid de promos/servicios/productos destacados */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+/* grid de promos/servicios/productos */
+.grid .card {
+  min-height: 180px;
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-card);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.grid .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(120deg, rgba(59, 130, 246, 0.45), rgba(236, 72, 153, 0.45));
+}
+
+.grid .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 44px rgba(59, 130, 246, 0.18);
+}
+
+.grid .card img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.grid .card .card-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.grid .card p {
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.grid .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #e0f2fe, #f3e8ff);
+  color: #0f172a;
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+/* Carrusel/slider suave si aplica */
+.slider-controls button {
+  border-radius: 10px;
+  border: 2px solid rgba(37, 99, 235, 0.2);
+  background: #ffffff;
+  color: #2563eb;
+  padding: 10px 12px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.12);
+  transition: all var(--transition-fast);
+}
+
+.slider-controls button:hover {
+  border-color: #2563eb;
+  background: rgba(59, 130, 246, 0.08);
+  transform: translateY(-1px);
+}
+
+/* Listas simples (ej. servicios recientes) */
+.home-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.home-list li {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f9fafb, #ffffff);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.home-list span {
+  color: #475569;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .home-hero {
+    margin-bottom: 16px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .home-hero .card-title {
+    font-size: 1.05rem;
+  }
+
+  .quick-actions {
+    grid-template-columns: 1fr;
+  }
+}

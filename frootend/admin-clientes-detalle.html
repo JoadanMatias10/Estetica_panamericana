@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Detalle de cliente | Panel Administrador</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+<div class="page">
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-logo">EP</span>
+        <div class="brand-text">
+          <span class="brand-title">Estética Panamericana</span>
+          <span class="brand-subtitle">Panel Administrador</span>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="admin-dashboard.html" class="nav-link">Dashboard</a>
+        <a href="admin-agenda.html" class="nav-link">Citas</a>
+        <a href="admin-clientes-listado.html" class="nav-link is-active">Clientes</a>
+        <a href="admin-servicios-listado.html" class="nav-link">Servicios</a>
+        <a href="admin-inventario.html" class="nav-link">Inventario</a>
+        <a href="admin-pagos-registro.html" class="nav-link">Ventas / Pagos</a>
+        <a href="admin-reportes-generar.html" class="nav-link">Reportes</a>
+        <a href="admin-notificaciones-recordatorios.html" class="nav-link">Notificaciones</a>
+        <a href="admin-estilistas.html" class="nav-link">Estilistas</a>
+        <a href="admin-login.html" class="nav-link">Salir</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <!-- Datos personales -->
+      <section class="card">
+        <div class="card-header">
+          <h1 class="card-title">Detalle de cliente</h1>
+        </div>
+        <ul class="list">
+          <li class="list-item"><span>Nombre:</span><span>María López</span></li>
+          <li class="list-item"><span>Correo:</span><span>maria@example.com</span></li>
+          <li class="list-item"><span>Teléfono:</span><span>771 000 0001</span></li>
+          <li class="list-item"><span>Estado:</span><span class="badge">Activo</span></li>
+        </ul>
+        <div style="margin-top:10px;display:flex;gap:8px;">
+          <a href="admin-clientes-registro.html" class="btn btn--ghost">Editar datos</a>
+          <button class="btn btn--ghost">Inactivar cliente</button>
+        </div>
+      </section>
+
+      <!-- Historial de citas -->
+      <section class="card" style="margin-top:16px;">
+        <div class="card-header">
+          <h2 class="card-title">Historial de citas</h2>
+        </div>
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Servicio</th>
+            <th>Estilista</th>
+            <th>Estado</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>10/11/2025</td>
+            <td>Corte</td>
+            <td>Ana</td>
+            <td>Completada</td>
+          </tr>
+          <tr>
+            <td>15/11/2025</td>
+            <td>Tinte</td>
+            <td>Luis</td>
+            <td>Cancelada</td>
+          </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Historial de compras/pagos -->
+      <section class="card" style="margin-top:16px;">
+        <div class="card-header">
+          <h2 class="card-title">Historial de compras y pagos</h2>
+        </div>
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Concepto</th>
+            <th>Monto</th>
+            <th>Estado</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>10/11/2025</td>
+            <td>Servicio · Corte</td>
+            <td>$200</td>
+            <td>Pagado</td>
+          </tr>
+          <tr>
+            <td>15/11/2025</td>
+            <td>Productos AVYNA</td>
+            <td>$350</td>
+            <td>Pendiente</td>
+          </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Estética Panamericana · Panel Administrador</p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

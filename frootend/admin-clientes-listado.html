@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Listado de clientes | Panel Administrador</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+<div class="page">
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-logo">EP</span>
+        <div class="brand-text">
+          <span class="brand-title">Estética Panamericana</span>
+          <span class="brand-subtitle">Panel Administrador</span>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="admin-dashboard.html" class="nav-link">Dashboard</a>
+        <a href="admin-agenda.html" class="nav-link">Citas</a>
+        <a href="admin-clientes-listado.html" class="nav-link is-active">Clientes</a>
+        <a href="admin-servicios-listado.html" class="nav-link">Servicios</a>
+        <a href="admin-inventario.html" class="nav-link">Inventario</a>
+        <a href="admin-pagos-registro.html" class="nav-link">Ventas / Pagos</a>
+        <a href="admin-reportes-generar.html" class="nav-link">Reportes</a>
+        <a href="admin-notificaciones-recordatorios.html" class="nav-link">Notificaciones</a>
+        <a href="admin-estilistas.html" class="nav-link">Estilistas</a>
+        <a href="admin-login.html" class="nav-link">Salir</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <section class="card">
+        <div class="card-header">
+          <h1 class="card-title">Listado de clientes</h1>
+          <a href="admin-clientes-registro.html" class="btn btn--ghost">Registrar nuevo cliente</a>
+        </div>
+
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Teléfono</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>María López</td>
+            <td>maria@example.com</td>
+            <td>771 000 0001</td>
+            <td><span class="badge">Activo</span></td>
+            <td>
+              <a href="admin-clientes-detalle.html" style="font-size:0.78rem;">Ver detalle</a> ·
+              <a href="admin-clientes-registro.html" style="font-size:0.78rem;">Editar</a> ·
+              <a href="#" style="font-size:0.78rem;">Inactivar</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Carlos Pérez</td>
+            <td>carlos@example.com</td>
+            <td>771 000 0002</td>
+            <td><span class="badge">Inactivo</span></td>
+            <td>
+              <a href="admin-clientes-detalle.html" style="font-size:0.78rem;">Ver detalle</a> ·
+              <a href="admin-clientes-registro.html" style="font-size:0.78rem;">Editar</a> ·
+              <a href="#" style="font-size:0.78rem;">Reactivar</a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Estética Panamericana · Panel Administrador</p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registrar cliente | Panel Administrador</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+<div class="page">
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-logo">EP</span>
+        <div class="brand-text">
+          <span class="brand-title">Estética Panamericana</span>
+          <span class="brand-subtitle">Panel Administrador</span>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="admin-dashboard.html" class="nav-link">Dashboard</a>
+        <a href="admin-agenda.html" class="nav-link">Citas</a>
+        <a href="admin-clientes-listado.html" class="nav-link is-active">Clientes</a>
+        <a href="admin-servicios-listado.html" class="nav-link">Servicios</a>
+        <a href="admin-inventario.html" class="nav-link">Inventario</a>
+        <a href="admin-pagos-registro.html" class="nav-link">Ventas / Pagos</a>
+        <a href="admin-reportes-generar.html" class="nav-link">Reportes</a>
+        <a href="admin-notificaciones-recordatorios.html" class="nav-link">Notificaciones</a>
+        <a href="admin-estilistas.html" class="nav-link">Estilistas</a>
+        <a href="admin-login.html" class="nav-link">Salir</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <section class="card" style="max-width:720px;margin:0 auto;">
+        <div class="card-header">
+          <h1 class="card-title">Registrar nuevo cliente</h1>
+          <span class="card-subtitle">Formulario para capturar datos de clientes desde recepción/admin.</span>
+        </div>
+
+        <form class="form-grid" autocomplete="off">
+          <div class="form-group">
+            <label for="cli-nombre">Nombre completo</label>
+            <input id="cli-nombre" type="text" class="form-control" placeholder="Nombre y apellidos" required />
+          </div>
+          <div class="form-group">
+            <label for="cli-correo">Correo electrónico</label>
+            <input id="cli-correo" type="email" class="form-control" placeholder="cliente@correo.com" required />
+          </div>
+          <div class="form-group">
+            <label for="cli-tel">Teléfono</label>
+            <input id="cli-tel" type="tel" class="form-control" placeholder="771 000 0000" required />
+          </div>
+          <div class="form-group">
+            <label for="cli-fecha">Fecha de nacimiento</label>
+            <input id="cli-fecha" type="date" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="cli-estado">Estado</label>
+            <select id="cli-estado" class="form-control">
+              <option>Activo</option>
+              <option>Inactivo</option>
+            </select>
+          </div>
+          <div class="form-group" style="grid-column:1/-1;">
+            <button type="submit" class="btn">Guardar cliente</button>
+            <a href="admin-clientes-listado.html" class="btn btn--ghost">Cancelar</a>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Estética Panamericana · Panel Administrador</p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

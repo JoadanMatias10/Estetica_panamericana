@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Agenda unificada | Panel Administrador</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <div class="page">
+    <header class="main-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-logo">EP</span>
+          <div class="brand-text">
+            <span class="brand-title">Estética Panamericana</span>
+            <span class="brand-subtitle">Panel Administrador</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="admin-dashboard.html" class="nav-link">Dashboard</a>
+          <a href="admin-agenda.html" class="nav-link is-active">Citas</a>
+          <a href="admin-clientes-listado.html" class="nav-link">Clientes</a>
+          <a href="admin-servicios-listado.html" class="nav-link">Servicios</a>
+          <a href="admin-inventario.html" class="nav-link">Inventario</a>
+          <a href="admin-pagos-registro.html" class="nav-link">Ventas / Pagos</a>
+          <a href="admin-reportes-generar.html" class="nav-link">Reportes</a>
+          <a href="admin-notificaciones-recordatorios.html" class="nav-link">Notificaciones</a>
+          <a href="admin-estilistas.html" class="nav-link">Estilistas</a>
+          <a href="admin-login.html" class="nav-link">Salir</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <!-- Filtros -->
+        <section class="card">
+          <div class="card-header">
+            <h1 class="card-title">Agenda unificada de citas</h1>
+          </div>
+
+          <form class="form-grid">
+            <div class="form-group">
+              <label for="f-fecha">Fecha</label>
+              <input id="f-fecha" type="date" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="f-estilista">Estilista</label>
+              <select id="f-estilista" class="form-control">
+                <option value="">Todos</option>
+                <option>Ana</option>
+                <option>Luis</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="f-estado">Estado</label>
+              <select id="f-estado" class="form-control">
+                <option value="">Todos</option>
+                <option>Reservada</option>
+                <option>Confirmada</option>
+                <option>Cancelada</option>
+                <option>Completada</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="f-servicio">Servicio</label>
+              <select id="f-servicio" class="form-control">
+                <option value="">Todos</option>
+                <option>Corte</option>
+                <option>Tinte</option>
+                <option>Laciado</option>
+              </select>
+            </div>
+          </form>
+
+          <div style="margin-top:10px;display:flex;gap:8px;">
+            <button class="btn">Aplicar filtros</button>
+            <a href="admin-agenda.html" class="btn btn--ghost">Limpiar</a>
+            <a href="admin-agenda.html" class="btn btn--ghost">Crear cita manual</a>
+          </div>
+        </section>
+
+        <!-- Lista de citas (vista lista) -->
+        <section class="card" style="margin-top:18px;">
+          <div class="card-header">
+            <h2 class="card-title">Citas del día / semana</h2>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Cliente</th>
+                <th>Servicio</th>
+                <th>Estilista</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>20/11/2025</td>
+                <td>10:00</td>
+                <td>María López</td>
+                <td>Corte</td>
+                <td>Ana</td>
+                <td><span class="badge">Reservada</span></td>
+                <td>
+                  <a href="detalle-cita.html" style="font-size:0.78rem;">Ver</a> ·
+                  <a href="#" style="font-size:0.78rem;">Reprogramar</a> ·
+                  <a href="#" style="font-size:0.78rem;">Cancelar</a>
+                </td>
+              </tr>
+              <tr>
+                <td>20/11/2025</td>
+                <td>12:30</td>
+                <td>Carlos Pérez</td>
+                <td>Tinte</td>
+                <td>Luis</td>
+                <td><span class="badge">Confirmada</span></td>
+                <td>
+                  <a href="detalle-cita.html" style="font-size:0.78rem;">Ver</a> ·
+                  <a href="#" style="font-size:0.78rem;">Reprogramar</a> ·
+                  <a href="#" style="font-size:0.78rem;">Cancelar</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p style="margin-top:8px;font-size:0.78rem;color:#666;">
+            Lógica: validar disponibilidad del estilista y registrar cambios en el historial.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-inner">
+        <p>© 2025 Estética Panamericana · Panel Administrador</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
