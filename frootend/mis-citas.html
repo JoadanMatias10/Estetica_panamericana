@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mis citas | Estética Panamericana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/mis-citas.css" />
+  <link rel="stylesheet" href="../css/base-cliente.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="main-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-logo">EP</span>
+          <div class="brand-text">
+            <span class="brand-title">Estética Panamericana</span>
+            <span class="brand-subtitle">Módulo Cliente</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="home-cliente.html" class="nav-link">Inicio</a>
+          <a href="agendar-cita.html" class="nav-link">Agendar cita</a>
+          <a href="mis-citas.html" class="nav-link is-active">Mis citas</a>
+          <a href="catalogo-productos.html" class="nav-link">Productos AVYNA</a>
+          <a href="historial-pagos.html" class="nav-link">Pagos</a>
+          <a href="mi-perfil.html" class="nav-link">Mi perfil</a>
+          <a href="login-cliente.html" class="nav-link nav-link--outline">Salir</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <section class="card">
+          <div class="card-header">
+            <h1 class="card-title">Mis citas</h1>
+            <a href="agendar-cita.html" class="btn btn--ghost">Agendar nueva cita</a>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Servicio</th>
+                <th>Estilista</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>20/11/2025</td>
+                <td>17:00</td>
+                <td>Corte de cabello</td>
+                <td>Ana</td>
+                <td><span class="badge">Reservada</span></td>
+                <td>
+                  <a href="detalle-cita.html" style="font-size:0.78rem;">Ver detalle</a> ·
+                  <a href="#" style="font-size:0.78rem;">Reprogramar</a> ·
+                  <a href="#" style="font-size:0.78rem;">Cancelar</a>
+                </td>
+              </tr>
+              <tr>
+                <td>25/11/2025</td>
+                <td>10:30</td>
+                <td>Tinte completo</td>
+                <td>Luis</td>
+                <td><span class="badge">Completada</span></td>
+                <td>
+                  <a href="detalle-cita.html" style="font-size:0.78rem;">Ver detalle</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-inner">
+        <p>© 2025 Estética Panamericana · Módulo Cliente</p>
+        <p class="footer-meta">Proyecto académico · UTHH</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

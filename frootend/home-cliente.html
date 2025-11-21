@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home Cliente | Estética Panamericana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../css/home-cliente.css" />
+  <link rel="stylesheet" href="../css/base-cliente.css" />
+</head>
+<body>
+  <div class="page">
+    <!-- HEADER -->
+    <header class="main-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-logo">EP</span>
+          <div class="brand-text">
+            <span class="brand-title">Estética Panamericana</span>
+            <span class="brand-subtitle">Módulo Cliente</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="home-cliente.html" class="nav-link is-active">Inicio</a>
+          <a href="agendar-cita.html" class="nav-link">Agendar cita</a>
+          <a href="mis-citas.html" class="nav-link">Mis citas</a>
+          <a href="catalogo-productos.html" class="nav-link">Productos AVYNA</a>
+          <a href="historial-pagos.html" class="nav-link">Pagos</a>
+          <a href="mi-perfil.html" class="nav-link">Mi perfil</a>
+          <a href="login-cliente.html" class="nav-link nav-link--outline">Salir</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="main-content">
+      <div class="container">
+        <section class="card" style="margin-bottom: 16px">
+          <div class="card-header">
+            <h2 class="card-title">Bienvenid@, Nombre del Cliente</h2>
+          </div>
+          <p style="font-size: 0.9rem; color: #666666; margin-top: 4px">
+            Desde aquí puedes administrar tus citas, productos y pagos en Estética
+            Panamericana.
+          </p>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <h3 class="card-title">Próximas citas</h3>
+            <a href="mis-citas.html" class="btn btn--ghost">Ver todas</a>
+          </div>
+          <ul class="list">
+            <li class="list-item">
+              <span>Hoy · 17:00 · Corte de cabello · Estilista Ana</span>
+              <span class="badge">Reservada</span>
+            </li>
+            <li class="list-item">
+              <span>25/11 · 10:30 · Tinte completo · Estilista Luis</span>
+              <span class="badge">Confirmada</span>
+            </li>
+          </ul>
+        </section>
+
+        <div style="margin-top: 18px" class="grid">
+          <section class="card">
+            <div class="card-header">
+              <h3 class="card-title">Promociones activas</h3>
+            </div>
+            <ul class="list">
+              <li class="list-item">
+                <span>2x1 en tratamiento capilar</span>
+                <span>Válida hasta 30/11</span>
+              </li>
+              <li class="list-item">
+                <span>10% off en pestañas</span>
+                <span>Solo miércoles</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <div class="card-header">
+              <h3 class="card-title">Servicios destacados</h3>
+            </div>
+            <ul class="list">
+              <li class="list-item">
+                <span>Laciado permanente</span>
+                <span>Desde $500</span>
+              </li>
+              <li class="list-item">
+                <span>Depilación facial</span>
+                <span>Desde $200</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <div class="card-header">
+              <h3 class="card-title">Productos AVYNA recomendados</h3>
+            </div>
+            <ul class="list">
+              <li class="list-item">
+                <span>Shampoo nutritivo AVYNA</span>
+                <span>$250</span>
+              </li>
+              <li class="list-item">
+                <span>Tratamiento reparador AVYNA</span>
+                <span>$320</span>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <section class="card" style="margin-top: 18px">
+          <div class="card-header">
+            <h3 class="card-title">Accesos rápidos</h3>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px">
+            <a href="agendar-cita.html" class="btn">Agendar cita</a>
+            <a href="mis-citas.html" class="btn btn--ghost">Ver mis citas</a>
+            <a href="catalogo-productos.html" class="btn btn--ghost">Ver productos</a>
+            <a href="carrito.html" class="btn btn--ghost">Mis compras</a>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top: 18px">
+          <div class="card-header">
+            <h3 class="card-title">Notificaciones recientes</h3>
+          </div>
+          <ul class="list">
+            <li class="list-item">
+              <span>Tu cita de hoy a las 17:00 ha sido confirmada.</span>
+              <span>Hace 2 h</span>
+            </li>
+            <li class="list-item">
+              <span>Nuevo cupón disponible para tratamientos faciales.</span>
+              <span>Ayer</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+      <div class="container footer-inner">
+        <p>© 2025 Estética Panamericana · Módulo Cliente</p>
+        <p class="footer-meta">Proyecto académico · UTHH</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

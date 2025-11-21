@@ -1,0 +1,405 @@
+/* ========== PANTALLA CONFIRMAR PAGO ========== */
+
+.main-content .card {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Indicador visual de seguridad */
+.main-content .card::after {
+  content: "🔒";
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  font-size: 1.5rem;
+  opacity: 0.2;
+  transition: opacity var(--transition-fast);
+}
+
+.main-content .card:hover::after {
+  opacity: 0.4;
+}
+
+/* ========== LISTA DE RESUMEN DEL PEDIDO ========== */
+
+.list {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  border-radius: 12px;
+  padding: 20px;
+  border: 2px solid rgba(59, 130, 246, 0.1);
+  box-shadow: 
+    0 2px 12px rgba(0, 0, 0, 0.06),
+    inset 0 1px 2px rgba(255, 255, 255, 0.8);
+  margin-bottom: 24px;
+  position: relative;
+}
+
+/* Borde decorativo superior */
+.list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+  border-radius: 12px 12px 0 0;
+}
+
+.list-item {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.list-item::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 0;
+  background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+  border-radius: 2px;
+  transition: height var(--transition-fast);
+}
+
+.list-item:hover {
+  padding-left: 12px;
+  background: rgba(59, 130, 246, 0.02);
+}
+
+.list-item:hover::before {
+  height: 70%;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Etiquetas de la lista */
+.list-item span:first-child {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+}
+
+/* Valores de la lista */
+.list-item span:last-child {
+  font-weight: 600;
+  color: #475569;
+  font-size: 0.875rem;
+}
+
+/* Item de total destacado */
+.list-item:last-child {
+  margin-top: 12px;
+  padding-top: 20px;
+  border-top: 2px solid rgba(59, 130, 246, 0.2);
+}
+
+.list-item:last-child span:first-child {
+  font-size: 1.1rem;
+  color: #0a0a0a;
+}
+
+.list-item:last-child span:last-child {
+  font-size: 1.25rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========== MÉTODOS DE PAGO (RADIOS) ========== */
+
+.form-group {
+  position: relative;
+}
+
+/* Contenedor de opciones de pago */
+.form-group label {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.95rem;
+  padding: 16px 20px;
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+/* Efecto de fondo al hover */
+.form-group label::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05));
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.form-group label:hover {
+  border-color: #3b82f6;
+  transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.15);
+}
+
+.form-group label:hover::before {
+  opacity: 1;
+}
+
+/* Radio button personalizado */
+.form-group input[type="radio"] {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #cbd5e1;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.form-group input[type="radio"]::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  transform: scale(0);
+  transition: transform var(--transition-fast);
+}
+
+.form-group input[type="radio"]:checked {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-group input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+/* Label seleccionado */
+.form-group input[type="radio"]:checked + label,
+.form-group label:has(input[type="radio"]:checked) {
+  border-color: #3b82f6;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(139, 92, 246, 0.05));
+  color: #0a0a0a;
+  font-weight: 700;
+  box-shadow: 
+    0 4px 16px rgba(59, 130, 246, 0.2),
+    inset 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Icono de check en opción seleccionada */
+.form-group label:has(input[type="radio"]:checked)::after {
+  content: "✓";
+  position: absolute;
+  right: 20px;
+  font-size: 1.2rem;
+  color: #3b82f6;
+  font-weight: 700;
+  animation: checkmark 0.3s ease;
+}
+
+@keyframes checkmark {
+  0% {
+    transform: scale(0) rotate(-45deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Texto dentro del label */
+.form-group label span {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== SECCIÓN DE BOTONES ========== */
+
+.form-group:last-child {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 2px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+/* Decoración superior de la sección de botones */
+.form-group:last-child::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+}
+
+.form-group:last-child .btn {
+  min-width: 190px;
+  padding: 16px 32px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.02em;
+}
+
+/* Botón primario - Confirmar pago */
+.form-group:last-child .btn:not(.btn--ghost) {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border: none;
+  box-shadow: 
+    0 4px 16px rgba(16, 185, 129, 0.4),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.form-group:last-child .btn:not(.btn--ghost)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.form-group:last-child .btn:not(.btn--ghost):hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  box-shadow: 
+    0 8px 28px rgba(16, 185, 129, 0.5),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+.form-group:last-child .btn:not(.btn--ghost):hover::before {
+  opacity: 1;
+}
+
+/* Icono de seguridad en botón de confirmar */
+.form-group:last-child .btn:not(.btn--ghost)::after {
+  content: "🔒";
+  margin-left: 8px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Botón secundario - Cancelar */
+.form-group:last-child .btn--ghost {
+  background: #ffffff;
+  border: 2px solid rgba(0, 0, 0, 0.12);
+  color: #475569;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-group:last-child .btn--ghost:hover {
+  background: #fafafa;
+  border-color: #ef4444;
+  color: #ef4444;
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.15);
+  transform: translateY(-3px);
+}
+
+/* ========== MENSAJES DE SEGURIDAD ========== */
+
+.security-note {
+  margin-top: 20px;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  border: 1px solid #86efac;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  color: #166534;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.security-note::before {
+  content: "🔐";
+  font-size: 1.2rem;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 768px) {
+  .main-content .card {
+    max-width: 100%;
+  }
+
+  .list {
+    padding: 16px;
+  }
+
+  .form-group label {
+    padding: 14px 16px;
+    font-size: 0.875rem;
+  }
+
+  .form-group:last-child {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .form-group:last-child .btn {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .list-item span:first-child {
+    font-size: 0.875rem;
+  }
+
+  .list-item:last-child span:first-child {
+    font-size: 1rem;
+  }
+
+  .list-item:last-child span:last-child {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content .card::after {
+    display: none;
+  }
+
+  .list-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}

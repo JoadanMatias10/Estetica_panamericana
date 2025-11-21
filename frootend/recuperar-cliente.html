@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recuperar contraseña | Estética Panamericana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../css/recuperar-cliente.css" />
+  <link rel="stylesheet" href="../css/base-cliente.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="main-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-logo">EP</span>
+          <div class="brand-text">
+            <span class="brand-title">Estética Panamericana</span>
+            <span class="brand-subtitle">Módulo Cliente</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="home-cliente.html" class="nav-link">Inicio</a>
+          <a href="agendar-cita.html" class="nav-link">Agendar cita</a>
+          <a href="mis-citas.html" class="nav-link">Mis citas</a>
+          <a href="catalogo-productos.html" class="nav-link">Productos AVYNA</a>
+          <a href="historial-pagos.html" class="nav-link">Pagos</a>
+          <a href="mi-perfil.html" class="nav-link">Mi perfil</a>
+          <a href="login-cliente.html" class="nav-link nav-link--outline">Iniciar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <section class="card">
+          <div class="card-header">
+            <h1 class="card-title">Recuperar contraseña</h1>
+          </div>
+
+          <div class="form-grid">
+            <!-- Paso 1 -->
+            <div class="card" style="box-shadow: none">
+              <h3 class="section-title" style="font-size: 0.95rem">Paso 1: solicitar enlace</h3>
+              <form class="form-grid form-grid--single" autocomplete="off">
+                <div class="form-group">
+                  <label for="correo-rec">Correo electrónico</label>
+                  <input
+                    id="correo-rec"
+                    type="email"
+                    class="form-control"
+                    placeholder="ejemplo@correo.com"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn--full">
+                  Enviar enlace de recuperación
+                </button>
+              </form>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="card" style="box-shadow: none">
+              <h3 class="section-title" style="font-size: 0.95rem">
+                Paso 2: restablecer contraseña
+              </h3>
+              <form class="form-grid form-grid--single" autocomplete="off">
+                <div class="form-group">
+                  <label for="pass-new">Nueva contraseña</label>
+                  <input
+                    id="pass-new"
+                    type="password"
+                    class="form-control"
+                    placeholder="Mínimo 8 caracteres"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="pass-new-confirm">Confirmar contraseña</label>
+                  <input
+                    id="pass-new-confirm"
+                    type="password"
+                    class="form-control"
+                    placeholder="Repite tu contraseña"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn--full">Guardar nueva contraseña</button>
+              </form>
+            </div>
+          </div>
+
+          <p style="margin-top: 8px; font-size: 0.78rem; color: #666666">
+            Lógica: enlace de recuperación válido por tiempo limitado y validación de la nueva
+            contraseña.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-inner">
+        <p>© 2025 Estética Panamericana · Módulo Cliente</p>
+        <p class="footer-meta">Proyecto académico · UTHH</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

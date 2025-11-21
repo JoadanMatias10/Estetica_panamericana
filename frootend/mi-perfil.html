@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mi perfil | Estética Panamericana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/mi-perfil.css" />
+  <link rel="stylesheet" href="../css/base-cliente.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="main-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-logo">EP</span>
+          <div class="brand-text">
+            <span class="brand-title">Estética Panamericana</span>
+            <span class="brand-subtitle">Módulo Cliente</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="home-cliente.html" class="nav-link">Inicio</a>
+          <a href="agendar-cita.html" class="nav-link">Agendar cita</a>
+          <a href="mis-citas.html" class="nav-link">Mis citas</a>
+          <a href="catalogo-productos.html" class="nav-link">Productos AVYNA</a>
+          <a href="historial-pagos.html" class="nav-link">Pagos</a>
+          <a href="mi-perfil.html" class="nav-link is-active">Mi perfil</a>
+          <a href="login-cliente.html" class="nav-link nav-link--outline">Salir</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <!-- Datos visibles -->
+        <section class="card">
+          <div class="card-header">
+            <h1 class="card-title">Mi perfil</h1>
+          </div>
+          <ul class="list">
+            <li class="list-item"><span>Nombre:</span><span>Nombre del Cliente</span></li>
+            <li class="list-item"><span>Correo:</span><span>cliente@correo.com</span></li>
+            <li class="list-item"><span>Teléfono:</span><span>771 000 0000</span></li>
+            <li class="list-item"><span>Fecha de nacimiento:</span><span>01/01/2000</span></li>
+          </ul>
+        </section>
+
+        <!-- Editar datos personales -->
+        <section class="card" style="margin-top:16px;">
+          <div class="card-header">
+            <h2 class="card-title">Editar datos personales</h2>
+          </div>
+          <form class="form-grid">
+            <div class="form-group">
+              <label for="nombre-edit">Nombre completo</label>
+              <input id="nombre-edit" type="text" class="form-control" value="Nombre del Cliente" />
+            </div>
+            <div class="form-group">
+              <label for="correo-edit">Correo electrónico</label>
+              <input id="correo-edit" type="email" class="form-control" value="cliente@correo.com" />
+            </div>
+            <div class="form-group">
+              <label for="tel-edit">Teléfono</label>
+              <input id="tel-edit" type="tel" class="form-control" value="771 000 0000" />
+            </div>
+            <div class="form-group">
+              <label for="fecha-edit">Fecha de nacimiento</label>
+              <input id="fecha-edit" type="date" class="form-control" />
+            </div>
+            <div class="form-group" style="grid-column:1/-1;">
+              <button type="submit" class="btn">Guardar cambios</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Cambiar contraseña -->
+        <section class="card" style="margin-top:16px;">
+          <div class="card-header">
+            <h2 class="card-title">Cambiar contraseña</h2>
+          </div>
+          <form class="form-grid form-grid--single">
+            <div class="form-group">
+              <label for="pass-actual">Contraseña actual</label>
+              <input id="pass-actual" type="password" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="pass-nueva">Nueva contraseña</label>
+              <input id="pass-nueva" type="password" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="pass-nueva-conf">Confirmar nueva contraseña</label>
+              <input id="pass-nueva-conf" type="password" class="form-control" />
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn">Actualizar contraseña</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Preferencias de notificación -->
+        <section class="card" style="margin-top:16px;">
+          <div class="card-header">
+            <h2 class="card-title">Preferencias de notificaciones</h2>
+          </div>
+          <form class="form-grid form-grid--single">
+            <div class="form-group">
+              <label>
+                <input type="checkbox" checked />
+                Recibir recordatorios de citas por correo
+              </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input type="checkbox" checked />
+                Recibir promociones y descuentos
+              </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input type="checkbox" />
+                Notificaciones sobre nuevos productos AVYNA
+              </label>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn">Guardar preferencias</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-inner">
+        <p>© 2025 Estética Panamericana · Módulo Cliente</p>
+        <p class="footer-meta">Proyecto académico · UTHH</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

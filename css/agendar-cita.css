@@ -1,0 +1,188 @@
+/* ========== PANTALLA AGENDAR CITA ========== */
+
+.main-content .card {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Efecto de enfoque en el card principal */
+.main-content .card::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: calc(var(--radius-card) + 2px);
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity var(--transition-smooth);
+}
+
+.main-content .card:hover::after {
+  opacity: 0.15;
+}
+
+/* ========== SELECT DE HORARIO DESTACADO ========== */
+
+#hora-cita {
+  font-weight: 600;
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+  border: 2px solid #3b82f6;
+  box-shadow: 0 2px 12px rgba(59, 130, 246, 0.12);
+  padding: 14px 18px;
+  cursor: pointer;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+#hora-cita:hover {
+  border-color: #2563eb;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
+  transform: translateY(-1px);
+}
+
+#hora-cita:focus {
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Ícono personalizado para el select */
+#hora-cita {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%233b82f6' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 18px;
+  padding-right: 48px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* ========== GRUPO DE BOTONES INFERIOR ========== */
+
+.main-content .card .form-group:last-of-type {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 2px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+/* Efecto de brillo sutil en el separador */
+.main-content .card .form-group:last-of-type::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+  opacity: 0.4;
+}
+
+/* ========== ESTILOS DE BOTONES MEJORADOS ========== */
+
+.main-content .card .btn {
+  min-width: 180px;
+  padding: 14px 28px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto de onda al hacer clic */
+.main-content .card .btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.main-content .card .btn:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Botón primario con gradiente */
+.main-content .card .btn:not(.btn--ghost) {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border: none;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+}
+
+.main-content .card .btn:not(.btn--ghost):hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 8px 28px rgba(59, 130, 246, 0.5);
+  transform: translateY(-3px);
+}
+
+/* Botón secundario/ghost mejorado */
+.main-content .card .btn--ghost {
+  background: #ffffff;
+  border: 2px solid rgba(0, 0, 0, 0.12);
+  color: #171717;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.main-content .card .btn--ghost:hover {
+  background: #fafafa;
+  border-color: #3b82f6;
+  color: #3b82f6;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.15);
+  transform: translateY(-3px);
+}
+
+/* ========== ANIMACIÓN DE CARGA PARA BOTÓN ========== */
+
+.main-content .card .btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.main-content .card .btn[disabled]:hover {
+  transform: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 600px) {
+  .main-content .card {
+    max-width: 100%;
+  }
+
+  .main-content .card .btn {
+    min-width: 140px;
+    padding: 12px 20px;
+    font-size: 0.85rem;
+  }
+
+  .main-content .card .form-group:last-of-type {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .main-content .card .btn {
+    width: 100%;
+  }
+
+  #hora-cita {
+    padding: 12px 16px;
+    padding-right: 44px;
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carrito de compra | Estética Panamericana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/carrito.css" />
+  <link rel="stylesheet" href="../css/base-cliente.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="main-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-logo">EP</span>
+          <div class="brand-text">
+            <span class="brand-title">Estética Panamericana</span>
+            <span class="brand-subtitle">Módulo Cliente</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="home-cliente.html" class="nav-link">Inicio</a>
+          <a href="agendar-cita.html" class="nav-link">Agendar cita</a>
+          <a href="mis-citas.html" class="nav-link">Mis citas</a>
+          <a href="catalogo-productos.html" class="nav-link is-active">Productos AVYNA</a>
+          <a href="historial-pagos.html" class="nav-link">Pagos</a>
+          <a href="mi-perfil.html" class="nav-link">Mi perfil</a>
+          <a href="login-cliente.html" class="nav-link nav-link--outline">Salir</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <section class="card">
+          <div class="card-header">
+            <h1 class="card-title">Carrito de compra</h1>
+            <a href="catalogo-productos.html" class="btn btn--ghost">Seguir comprando</a>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Shampoo nutritivo AVYNA</td>
+                <td>1</td>
+                <td>$250</td>
+                <td>$250</td>
+              </tr>
+              <tr>
+                <td>Tratamiento reparador AVYNA</td>
+                <td>1</td>
+                <td>$320</td>
+                <td>$320</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="margin-top:12px; display:flex; justify-content:flex-end;">
+            <div style="text-align:right;">
+              <p style="font-size:0.85rem;">Subtotal: $570</p>
+              <p style="font-size:0.85rem; font-weight:600;">Total a pagar: $570</p>
+              <a href="confirmar-pago.html" class="btn" style="margin-top:8px;">Confirmar compra</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-inner">
+        <p>© 2025 Estética Panamericana · Módulo Cliente</p>
+        <p class="footer-meta">Proyecto académico · UTHH</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

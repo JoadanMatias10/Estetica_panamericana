@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Agendar cita | Estética Panamericana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/agendar-cita.css" />
+  <link rel="stylesheet" href="../css/base-cliente.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="main-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-logo">EP</span>
+          <div class="brand-text">
+            <span class="brand-title">Estética Panamericana</span>
+            <span class="brand-subtitle">Módulo Cliente</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="home-cliente.html" class="nav-link">Inicio</a>
+          <a href="agendar-cita.html" class="nav-link is-active">Agendar cita</a>
+          <a href="mis-citas.html" class="nav-link">Mis citas</a>
+          <a href="catalogo-productos.html" class="nav-link">Productos AVYNA</a>
+          <a href="historial-pagos.html" class="nav-link">Pagos</a>
+          <a href="mi-perfil.html" class="nav-link">Mi perfil</a>
+          <a href="login-cliente.html" class="nav-link nav-link--outline">Salir</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <section class="card">
+          <div class="card-header">
+            <h1 class="card-title">Agendar cita</h1>
+            <span class="card-subtitle">Selecciona servicio, estilista, fecha y horario disponible.</span>
+          </div>
+
+          <form class="form-grid" autocomplete="off">
+            <div class="form-group">
+              <label for="servicio">Servicio</label>
+              <select id="servicio" class="form-control" required>
+                <option value="">Selecciona un servicio</option>
+                <option>Corte de cabello</option>
+                <option>Tinte completo</option>
+                <option>Laciado permanente</option>
+                <option>Pestañas</option>
+                <option>Cejas</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="estilista">Estilista (opcional)</label>
+              <select id="estilista" class="form-control">
+                <option value="">Asignar automáticamente</option>
+                <option>Ana</option>
+                <option>Luis</option>
+                <option>María</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="fecha-cita">Fecha</label>
+              <input id="fecha-cita" type="date" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+              <label for="hora-cita">Horario disponible</label>
+              <select id="hora-cita" class="form-control" required>
+                <option value="">Selecciona una hora</option>
+                <option>10:00</option>
+                <option>11:30</option>
+                <option>13:00</option>
+                <option>16:30</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="grid-column: 1 / -1; display:flex; gap:8px;">
+              <button type="submit" class="btn">Confirmar cita</button>
+              <a href="home-cliente.html" class="btn btn--ghost">Cancelar / Regresar</a>
+            </div>
+          </form>
+
+          <p style="margin-top:8px;font-size:0.78rem;color:#666;">
+            Lógica: validar que no exista choque con otra cita, registrar y enviar confirmación.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-inner">
+        <p>© 2025 Estética Panamericana · Módulo Cliente</p>
+        <p class="footer-meta">Proyecto académico · UTHH</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

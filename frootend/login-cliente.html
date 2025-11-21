@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Cliente | Estética Panamericana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../css/login-cliente.css" />
+  <link rel="stylesheet" href="../css/base-cliente.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="main-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-logo">EP</span>
+          <div class="brand-text">
+            <span class="brand-title">Estética Panamericana</span>
+            <span class="brand-subtitle">Módulo Cliente</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="home-cliente.html" class="nav-link">Inicio</a>
+          <a href="agendar-cita.html" class="nav-link">Agendar cita</a>
+          <a href="mis-citas.html" class="nav-link">Mis citas</a>
+          <a href="catalogo-productos.html" class="nav-link">Productos AVYNA</a>
+          <a href="historial-pagos.html" class="nav-link">Pagos</a>
+          <a href="mi-perfil.html" class="nav-link">Mi perfil</a>
+          <a href="login-cliente.html" class="nav-link nav-link--outline is-active">
+            Iniciar sesión
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <section class="card" style="max-width: 420px; margin: 0 auto">
+          <div class="card-header">
+            <h1 class="card-title">Iniciar sesión</h1>
+          </div>
+
+          <form class="form-grid form-grid--single" autocomplete="off">
+            <div class="form-group">
+              <label for="usuario">Correo electrónico o nombre de usuario</label>
+              <input
+                id="usuario"
+                name="usuario"
+                type="text"
+                class="form-control"
+                placeholder="ejemplo@correo.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password">Contraseña</label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                class="form-control"
+                placeholder="Ingresa tu contraseña"
+                required
+              />
+            </div>
+
+            <button type="submit" class="btn btn--full">Iniciar sesión</button>
+          </form>
+
+          <div style="margin-top: 10px; font-size: 0.8rem; text-align: center">
+            <a href="recuperar-cliente.html">¿Olvidaste tu contraseña?</a>
+            <span style="margin: 0 4px">·</span>
+            <a href="registro-cliente.html">Crear cuenta / Registrarse</a>
+          </div>
+
+          <p style="margin-top: 6px; font-size: 0.78rem; color: #666666; text-align: center">
+            * Validaciones: usuario registrado, contraseña correcta y manejo de intentos
+            fallidos.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-inner">
+        <p>© 2025 Estética Panamericana · Módulo Cliente</p>
+        <p class="footer-meta">Proyecto académico · UTHH</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

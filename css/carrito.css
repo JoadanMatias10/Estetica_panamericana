@@ -1,0 +1,296 @@
+/* ========== PANTALLA CARRITO ========== */
+
+.main-content .card {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  overflow: visible;
+}
+
+/* Efecto de sombra premium para el card del carrito */
+.main-content .card {
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.main-content .card:hover {
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.18),
+    0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+/* ========== TABLA DEL CARRITO MEJORADA ========== */
+
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Header de la tabla con gradiente */
+.table thead {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  position: relative;
+}
+
+.table thead::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+  opacity: 0.3;
+}
+
+.table th {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #475569;
+  padding: 16px 18px;
+  border: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.table th:last-child {
+  border-right: none;
+}
+
+/* Columna de cantidad centrada y destacada */
+.table th:nth-child(2),
+.table td:nth-child(2) {
+  text-align: center;
+  background: rgba(59, 130, 246, 0.02);
+  font-weight: 600;
+}
+
+.table th:nth-child(2) {
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.08);
+}
+
+/* Celdas del cuerpo de la tabla */
+.table td {
+  padding: 18px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgba(0, 0, 0, 0.03);
+  vertical-align: middle;
+  transition: all var(--transition-fast);
+}
+
+.table td:last-child {
+  border-right: none;
+}
+
+/* Efecto hover en filas */
+.table tbody tr {
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.table tbody tr::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.table tbody tr:hover {
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.03), transparent);
+  transform: scale(1.005);
+}
+
+.table tbody tr:hover::before {
+  opacity: 1;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Resaltar precios en la tabla */
+.table td:last-child {
+  font-weight: 700;
+  color: #0a0a0a;
+  font-size: 0.95rem;
+}
+
+/* ========== RESUMEN TOTAL ========== */
+
+.main-content .card > div:last-child {
+  margin-top: 32px;
+  padding: 24px;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  border-radius: 12px;
+  border: 2px solid rgba(59, 130, 246, 0.15);
+  box-shadow: 
+    0 4px 16px rgba(59, 130, 246, 0.08),
+    inset 0 1px 2px rgba(255, 255, 255, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de brillo en el resumen */
+.main-content .card > div:last-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.main-content .card > div:last-child:hover::before {
+  left: 100%;
+}
+
+/* Textos del resumen */
+.main-content .card > div:last-child p {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all var(--transition-fast);
+}
+
+.main-content .card > div:last-child p:hover {
+  color: #1e293b;
+  padding-left: 8px;
+}
+
+.main-content .card > div:last-child p:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* Total destacado */
+.main-content .card > div:last-child p:last-child {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0a0a0a;
+  padding: 16px 0 0;
+  margin-top: 12px;
+  border-top: 2px solid rgba(59, 130, 246, 0.2);
+  position: relative;
+}
+
+.main-content .card > div:last-child p:last-child::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+}
+
+/* Valores numéricos en negrita */
+.main-content .card > div:last-child p span:last-child {
+  font-weight: 700;
+  color: #0a0a0a;
+  font-size: 1.05em;
+}
+
+.main-content .card > div:last-child p:last-child span:last-child {
+  font-size: 1.1em;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========== BOTONES DEL CARRITO ========== */
+
+.main-content .card .btn {
+  margin-top: 24px;
+  min-width: 200px;
+  padding: 14px 32px;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+}
+
+.main-content .card .btn:not(.btn--ghost) {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.main-content .card .btn:not(.btn--ghost):hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 8px 28px rgba(59, 130, 246, 0.45);
+}
+
+/* ========== ESTADOS ESPECIALES ========== */
+
+/* Carrito vacío */
+.main-content .card.empty-cart {
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+}
+
+.main-content .card.empty-cart p {
+  color: #64748b;
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 768px) {
+  .main-content .card {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .table {
+    font-size: 0.8rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 12px 10px;
+  }
+
+  .main-content .card > div:last-child {
+    padding: 20px 16px;
+  }
+
+  .main-content .card > div:last-child p {
+    font-size: 0.875rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .main-content .card > div:last-child p:last-child {
+    font-size: 1.1rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-content .card .btn {
+    width: 100%;
+    min-width: auto;
+  }
+}

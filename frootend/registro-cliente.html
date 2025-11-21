@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro Cliente | Estética Panamericana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../css/registro-cliente.css" />
+  <link rel="stylesheet" href="../css/base-cliente.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="main-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-logo">EP</span>
+          <div class="brand-text">
+            <span class="brand-title">Estética Panamericana</span>
+            <span class="brand-subtitle">Módulo Cliente</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="home-cliente.html" class="nav-link">Inicio</a>
+          <a href="agendar-cita.html" class="nav-link">Agendar cita</a>
+          <a href="mis-citas.html" class="nav-link">Mis citas</a>
+          <a href="catalogo-productos.html" class="nav-link">Productos AVYNA</a>
+          <a href="historial-pagos.html" class="nav-link">Pagos</a>
+          <a href="mi-perfil.html" class="nav-link">Mi perfil</a>
+          <a href="login-cliente.html" class="nav-link nav-link--outline">Iniciar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <section class="card">
+          <div class="card-header">
+            <h1 class="card-title">Registro de cliente</h1>
+            <span class="card-subtitle">
+              Completa tus datos para crear tu cuenta.
+            </span>
+          </div>
+
+          <form class="form-grid" autocomplete="off">
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input
+                id="nombre"
+                name="nombre"
+                type="text"
+                class="form-control"
+                placeholder="Nombre y apellidos"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="correo">Correo electrónico</label>
+              <input
+                id="correo"
+                name="correo"
+                type="email"
+                class="form-control"
+                placeholder="ejemplo@correo.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input
+                id="telefono"
+                name="telefono"
+                type="tel"
+                class="form-control"
+                placeholder="771 000 0000"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="fecha">Fecha de nacimiento</label>
+              <input id="fecha" name="fecha" type="date" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+              <label for="password-reg">Contraseña</label>
+              <input
+                id="password-reg"
+                name="password"
+                type="password"
+                class="form-control"
+                placeholder="Mínimo 8 caracteres"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password-confirm">Confirmar contraseña</label>
+              <input
+                id="password-confirm"
+                name="passwordConfirm"
+                type="password"
+                class="form-control"
+                placeholder="Repite tu contraseña"
+                required
+              />
+            </div>
+
+            <div class="form-group" style="grid-column: 1 / -1">
+              <button type="submit" class="btn btn--full">Registrarme</button>
+            </div>
+          </form>
+
+          <div style="margin-top: 10px; font-size: 0.8rem; text-align: center">
+            ¿Ya tienes cuenta?
+            <a href="login-cliente.html">Inicia sesión</a>
+          </div>
+
+          <p style="margin-top: 6px; font-size: 0.78rem; color: #666666; text-align: center">
+            Lógica: validar correo y teléfono únicos, contraseña segura, enviar correo de
+            confirmación y mostrar mensaje de éxito.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-inner">
+        <p>© 2025 Estética Panamericana · Módulo Cliente</p>
+        <p class="footer-meta">Proyecto académico · UTHH</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

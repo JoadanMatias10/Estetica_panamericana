@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Confirmar pago | Estética Panamericana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/confirmar-pago.css" />
+  <link rel="stylesheet" href="../css/base-cliente.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="main-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-logo">EP</span>
+          <div class="brand-text">
+            <span class="brand-title">Estética Panamericana</span>
+            <span class="brand-subtitle">Módulo Cliente</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="home-cliente.html" class="nav-link">Inicio</a>
+          <a href="agendar-cita.html" class="nav-link">Agendar cita</a>
+          <a href="mis-citas.html" class="nav-link">Mis citas</a>
+          <a href="catalogo-productos.html" class="nav-link">Productos AVYNA</a>
+          <a href="historial-pagos.html" class="nav-link is-active">Pagos</a>
+          <a href="mi-perfil.html" class="nav-link">Mi perfil</a>
+          <a href="login-cliente.html" class="nav-link nav-link--outline">Salir</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <section class="card" style="max-width:640px;margin:0 auto;">
+          <div class="card-header">
+            <h1 class="card-title">Confirmar pago</h1>
+          </div>
+
+          <h3 class="section-title" style="font-size:0.95rem;">Resumen</h3>
+          <ul class="list">
+            <li class="list-item"><span>Concepto:</span><span>Compra de productos AVYNA</span></li>
+            <li class="list-item"><span>Detalle:</span><span>2 productos</span></li>
+            <li class="list-item"><span>Monto total:</span><span>$570</span></li>
+          </ul>
+
+          <h3 class="section-title" style="font-size:0.95rem;margin-top:14px;">Método de pago</h3>
+          <form class="form-grid form-grid--single">
+            <div class="form-group">
+              <label>
+                <input type="radio" name="pago" /> Efectivo en sucursal
+              </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input type="radio" name="pago" /> Tarjeta (registrada en caja)
+              </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input type="radio" name="pago" /> Transferencia
+              </label>
+            </div>
+
+            <div class="form-group" style="margin-top:10px; display:flex; gap:8px;">
+              <button type="submit" class="btn">Pagar / Registrar pago</button>
+              <a href="carrito.html" class="btn btn--ghost">Cancelar</a>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-inner">
+        <p>© 2025 Estética Panamericana · Módulo Cliente</p>
+        <p class="footer-meta">Proyecto académico · UTHH</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
