@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mis servicios realizados | Módulo Estilista</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <div class="page">
+    <header class="main-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-logo">EP</span>
+          <div class="brand-text">
+            <span class="brand-title">Estética Panamericana</span>
+            <span class="brand-subtitle">Módulo Estilista</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="estilista-home.html" class="nav-link">Mi día</a>
+          <a href="estilista-agenda.html" class="nav-link">Mi agenda</a>
+          <a href="estilista-servicios-historial.html" class="nav-link is-active">Mis servicios</a>
+          <a href="estilista-notificaciones.html" class="nav-link">Notificaciones</a>
+          <a href="estilista-perfil.html" class="nav-link">Mi perfil</a>
+          <a href="estilista-login.html" class="nav-link">Salir</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <!-- Filtros -->
+        <section class="card">
+          <div class="card-header">
+            <h1 class="card-title">Mis servicios realizados</h1>
+          </div>
+
+          <form class="form-grid">
+            <div class="form-group">
+              <label for="hs-desde">Desde</label>
+              <input id="hs-desde" type="date" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="hs-hasta">Hasta</label>
+              <input id="hs-hasta" type="date" class="form-control" />
+            </div>
+            <div class="form-group" style="grid-column:1/-1;">
+              <label for="hs-servicio">Tipo de servicio</label>
+              <select id="hs-servicio" class="form-control">
+                <option>TODOS</option>
+                <option>Corte</option>
+                <option>Tinte</option>
+                <option>Laciado</option>
+                <option>Tratamientos faciales</option>
+              </select>
+            </div>
+          </form>
+
+          <div style="margin-top:10px;">
+            <button class="btn">Filtrar</button>
+          </div>
+        </section>
+
+        <!-- Historial -->
+        <section class="card" style="margin-top:18px;">
+          <div class="card-header">
+            <h2 class="card-title">Lista de servicios</h2>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Cliente</th>
+                <th>Servicio</th>
+                <th>Duración</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>10/11/2025</td>
+                <td>María López</td>
+                <td>Corte</td>
+                <td>45 min</td>
+              </tr>
+              <tr>
+                <td>12/11/2025</td>
+                <td>Carlos Pérez</td>
+                <td>Tinte</td>
+                <td>90 min</td>
+              </tr>
+              <tr>
+                <td>14/11/2025</td>
+                <td>Laura Sánchez</td>
+                <td>Laciado</td>
+                <td>120 min</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-inner">
+        <p>© 2025 Estética Panamericana · Módulo Estilista</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
